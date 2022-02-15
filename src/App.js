@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Accordion from "./component/Accordion";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default () => {
+
+    const items = [
+        {
+            title: 'What is React?',
+            content: 'React is frontend javascript framework'
+        },
+        {
+            title: 'What is Callback?',
+            content: 'A callback is a plain JavaScript function passed to some method as an argument or option'
+        },
+        {
+            title: 'What are the features of JavaScript?',
+            content: 'It is a lightweight, interpreted programming language.'
+        }
+    ];
+    return (
+        <div>
+            <Accordion items={items} />
+        </div>
+    )
 }
-
-export default App;
